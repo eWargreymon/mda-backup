@@ -1,0 +1,32 @@
+.title {
+  text-align: center;
+}
+
+footer {
+  color: lightgray;
+  padding: 10px;
+ /* position: absolute;*/
+  width: 100%;
+}
+
+nav ul li a{
+  font-size: 20px;
+  color:white;
+  background-image: linear-gradient(rgb(240, 188, 241), rgb(240, 188, 241));
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: all .5s;
+}
+
+nav ul li a:hover{
+  font-size: 20px;
+  background-size: 100% 2px;
+  color:rgb(240, 188, 241);
+}
+
+@media only screen and (max-width: 540px) {
+  nav ul li{
+    margin-right: 0rem!important;
+  }
+}
