@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AgregarComponent } from './components/agregar/agregar.component';
 import { FloresComponent } from './components/flores/flores.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { InformacionComponent } from './components/informacion/informacion.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path:'predict', component:PrediccionComponent},
   { path:'about', component:InformacionComponent},
   { path:'flowers', component:FloresComponent},
+  { path:'agregar', component:AgregarComponent},
   { path:'**', redirectTo:'/home'}
 ];
 

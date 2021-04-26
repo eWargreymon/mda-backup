@@ -12,8 +12,8 @@ export class FlowerServiceService {
     return this.afs.collection('Flowers').snapshotChanges();
   }
 
-  getFlower(id: string){
-
+  addFlower(payload: Flower){
+    return this.afs.collection('Flowers').add(payload);
   }
 
 }

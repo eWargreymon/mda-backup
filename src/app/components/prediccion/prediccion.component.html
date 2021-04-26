@@ -1,17 +1,17 @@
 <div class="container">
-    <h1>Resultado de la identificación</h1>
-    <div class="row">
-        <div class="col-6">
-            <img [src]="imagen" alt="">
-            <p>Tipo de flor</p>
-        </div>
-        <div class="col-6">
-            <h3>Información de la flor</h3>
-            <ul>
-                <li></li>
-                <li>Localización</li>
-                <li>Datos...</li>
-            </ul>
-        </div>
+  <h1>Resultado de la identificación</h1>
+  <div class="row">
+    <div class="col-6">
+      <img [src]="imagen" alt="" id="image" />
+      <p>{{flores[0]['Name']}}</p>
     </div>
+    <div class="col-6">
+      <h3>Información de la flor</h3>
+      <ul>
+        <li>{{flores[0]['ScName']}}</li>
+        <li>{{flores[0]['Location']}}</li>
+        <li>{{flores[0]['Description']}}</li>
+      </ul>
+    </div>
+  </div>
 </div>

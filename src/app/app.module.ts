@@ -10,7 +10,8 @@ import { InformacionComponent } from './components/informacion/informacion.compo
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
-
+import { AgregarComponent } from './components/agregar/agregar.component';
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -19,12 +20,14 @@ import { environment } from 'src/environments/environment';
     FormularioComponent,
     PrediccionComponent,
     FloresComponent,
-    InformacionComponent
+    InformacionComponent,
+    AgregarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    ReactiveFormsModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

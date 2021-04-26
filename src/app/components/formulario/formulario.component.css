@@ -1,6 +1,6 @@
 .presentation {
   height: calc(100vh - 165px);
-  background-image: url("../../img/tulipan.webp");
+  background-image: url("src/app/img/tulipan.webp");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
