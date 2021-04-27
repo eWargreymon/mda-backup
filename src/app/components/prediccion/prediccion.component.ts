@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Flower, FlowerServiceService } from 'src/app/services/flower-service.service';
 import { FloresComponent } from '../flores/flores.component';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { map } from 'rxjs/operators';
+import { AngularFirestoreCollection } from '@angular/fire/firestore';
  
 @Component({
   selector: 'app-prediccion',

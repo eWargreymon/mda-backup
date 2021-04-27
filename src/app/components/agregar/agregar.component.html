@@ -1,53 +1,121 @@
 <div class="container">
-
+  <div class="text-center m-3">
     <h1>Panel de control</h1>
-
-    <h2>Agregar flores</h2>
-    <form [formGroup]="formulario" (ngSubmit)="submit()">
+  </div>
+  <div class="row">
+    <div class="col-md-8 text-center">
+      <h2>Agregar flores</h2>
+      <form [formGroup]="formulario" (ngSubmit)="submit()">
         <div class="form-group">
-            <label>Nombre común</label>
-            <input type="text" formControlName="Name" class="form-control" placeholder="Introduce nombre">
-            <div class="error" *ngIf="formulario.controls.Name.errors?.required && formulario.controls.Name.touched">
-                Todos los campos son requeridos
-            </div>
+          <label>Nombre común</label>
+          <input
+            type="text"
+            formControlName="Name"
+            class="form-control"
+            placeholder="Introduce nombre"
+          />
+          <div
+            class="error"
+            *ngIf="
+              formulario.controls.Name.errors?.required &&
+              formulario.controls.Name.touched
+            "
+          >
+            Todos los campos son requeridos
+          </div>
         </div>
         <div class="form-group">
-            <label>Nombre científico</label>
-            <input type="text" formControlName="ScName" class="form-control" placeholder="Introduce nombre científico">
-            <div class="error" *ngIf="formulario.controls.ScName.errors?.required && formulario.controls.ScName.touched">
-                Todos los campos son requeridos
-            </div>
+          <label>Nombre científico</label>
+          <input
+            type="text"
+            formControlName="ScName"
+            class="form-control"
+            placeholder="Introduce nombre científico"
+          />
+          <div
+            class="error"
+            *ngIf="
+              formulario.controls.ScName.errors?.required &&
+              formulario.controls.ScName.touched
+            "
+          >
+            Todos los campos son requeridos
+          </div>
         </div>
         <div class="form-group">
-            <label>Descripcción</label>
-            <input type="text" formControlName="Description" class="form-control" placeholder="Introduce una descripcción">
-            <div class="error" *ngIf="formulario.controls.Description.errors?.required && formulario.controls.Description.touched">
-                Todos los campos son requeridos
-            </div>
+          <label>Descripcción</label>
+          <input
+            type="text"
+            formControlName="Description"
+            class="form-control"
+            placeholder="Introduce una descripcción"
+          />
+          <div
+            class="error"
+            *ngIf="
+              formulario.controls.Description.errors?.required &&
+              formulario.controls.Description.touched
+            "
+          >
+            Todos los campos son requeridos
+          </div>
         </div>
         <div class="form-group">
-            <label>Localización</label>
-            <input type="text" formControlName="Location" class="form-control" placeholder="Introduce su localización">
-            <div class="error" *ngIf="formulario.controls.Location.errors?.required && formulario.controls.Location.touched">
-                Todos los campos son requeridos
-            </div>
+          <label>Localización</label>
+          <input
+            type="text"
+            formControlName="Location"
+            class="form-control"
+            placeholder="Introduce su localización"
+          />
+          <div
+            class="error"
+            *ngIf="
+              formulario.controls.Location.errors?.required &&
+              formulario.controls.Location.touched
+            "
+          >
+            Todos los campos son requeridos
+          </div>
         </div>
         <div class="form-group">
-            <label>Imagen de muestra</label>
-            <input type="text" formControlName="Image" class="form-control" placeholder="Introduce el enlace a una imagen de muestra">
-            <div class="error" *ngIf="formulario.controls.Image.errors?.required && formulario.controls.Image.touched">
-                Todos los campos son requeridos
-            </div>
+          <label>Imagen de muestra</label>
+          <input
+            type="text"
+            formControlName="Image"
+            class="form-control"
+            placeholder="Introduce el enlace a una imagen de muestra"
+          />
+          <div
+            class="error"
+            *ngIf="
+              formulario.controls.Image.errors?.required &&
+              formulario.controls.Image.touched
+            "
+          >
+            Todos los campos son requeridos
+          </div>
         </div>
         <button class="btn btn-success">Enviar</button>
-    </form>
-    <div>
-        <h2>Listado de flores agregadas</h2>
-        <ul>
-            <li *ngFor="let f of flores">
-                {{f.Name}}
-                <!-- <img src="{{f.Image}}" alt=""> -->
-            </li>
-        </ul>
+      </form>
     </div>
+    <div class="col-md-4 text-center">
+      <h2>Flores agregadas</h2>
+      <ul class="list-group col-6 m-auto">
+        <div class="mt-4 lista">
+            <li class="list-group-item" *ngFor="let f of flores">
+            {{ f.Name }}
+            <!-- <img src="{{f.Image}}" alt="">
+             Flores que faltan por añadir:   Fritillary
+                                            Snowdrop
+                                            Sunflower
+                                            Tigerlily
+                                            WindFlower
+                                            tulip
+            -->
+            </li>
+        </div>
+      </ul>
+    </div>
+  </div>
 </div>

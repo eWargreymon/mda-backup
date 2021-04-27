@@ -1,7 +1,6 @@
 <div class="container">
   <h1>Resultado de la identificación</h1>
   <div class="row">
-    <div class="col-md-10 color bg-dark">
     <div class="col-6">
       <img [src]="imagen" alt="" id="image" />
       <p>{{flores[0]['Name']}}</p>
@@ -14,18 +13,5 @@
         <li>{{flores[0]['Description']}}</li>
       </ul>
     </div>
-  </div>
-
-   <div class="col-md-2">
-     <p>Lista de flores</p>
-      <div *ngFor="let flor1 of observableFlores | async">
-        <p>{{ flor1.name }}</p>
-      </div>
-      
-      <div *ngFor="let flor2 of arrayFlores">
-        <p>{{ flor2.name }}</p>
-      </div>
-    </div>
-    
   </div>
 </div>
