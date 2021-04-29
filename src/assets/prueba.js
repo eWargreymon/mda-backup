@@ -10,6 +10,7 @@ function loadModel(){
         console.log('Model Loaded!');
         classifier.classify(document.getElementById('image'), (err, results) => {
             document.getElementById("salida").innerHTML = results[0]['label']
+            document.getElementById("prob").innerHTML = results[0]['confidence']
         });
         
     }

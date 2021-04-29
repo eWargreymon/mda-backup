@@ -14,6 +14,8 @@ export class PrediccionComponent implements OnInit {
   flores: Flower[];
   predictedFlower: Flower;
   prediction: any;
+  prob: any;
+  show: boolean = false;
   
   constructor(private flowerService: FlowerServiceService) { 
     this.flores = [];
@@ -37,9 +39,13 @@ export class PrediccionComponent implements OnInit {
     document.getElementById("loading").style.display = "none";
     
     this.prediction = document.getElementById("salida").innerHTML;
+    this.prob = document.getElementById("prob").innerHTML;
+    (this.prob>0.9) ? this.show=true : this.show=false;
+    console.log(this.show)
     
     this.getPrediction();
   }
+
 
   getAllFlowers(){
     this.flowerService.getAll().subscribe((res) =>{
