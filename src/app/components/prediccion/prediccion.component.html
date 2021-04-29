@@ -1,16 +1,20 @@
+<div id="loading"><div><img class="carge_logo" src="assets/loginicon/flower.svg"><p id="loadingtext">Text</p></div></div>
 <div class="container">
   <h1>Resultado de la identificación</h1>
   <div class="row">
     <div class="col-6">
       <img [src]="imagen" alt="" id="image" />
-      <p>{{flores[0]['Name']}}</p>
+      <!-- Poner un display none para que no aparezca en el html una vez terminadas las pruebas -->
+      <p id="salida"></p>
     </div>
     <div class="col-6">
       <h3>Información de la flor</h3>
       <ul>
-        <li>{{flores[0]['ScName']}}</li>
-        <li>{{flores[0]['Location']}}</li>
-        <li>{{flores[0]['Description']}}</li>
+        <li>Nombre: {{predictedFlower.Name}}</li>
+        <li>Nombre científico: {{predictedFlower.ScName}}</li>
+        <li>Descripción: {{predictedFlower.Description}}</li>
+        <li>Localización: {{predictedFlower.Location}}</li>
+        <img src="{{predictedFlower.Image}}" alt="imagen adicional sobre la flor" class="adicionalImage">
       </ul>
     </div>
   </div>

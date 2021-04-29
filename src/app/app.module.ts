@@ -13,7 +13,6 @@ import { environment } from 'src/environments/environment';
 import { AgregarComponent } from './components/agregar/agregar.component';
 import { ReactiveFormsModule } from "@angular/forms";
 
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -16,12 +16,17 @@ export class FlowerServiceService {
     return this.afs.collection('Flowers').add(payload);
   }
 
+  deleteFlower(id: string){
+    return this.afs.doc('Flowers/' + id).delete();
+  }
+
 }
 
 export interface Flower{
-  name: string;
-  description: string;
-  image: string;
-  location: string;
-  scname: string;
+  id?: string;
+  Name: string;
+  Description: string;
+  Image: string;
+  Location: string;
+  ScName: string;
 }
