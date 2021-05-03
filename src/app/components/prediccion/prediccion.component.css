@@ -16,6 +16,7 @@ img{
     overflow: hidden;
     text-align: center;
 }
+
 #loading div{
     position: absolute;
     width: 50%;
@@ -56,4 +57,58 @@ img{
     to {
         transform: rotate(360deg);
     }
+}
+
+@media only screen and (max-width: 900px) {
+    #loading div{
+    position: absolute;
+    width: 90%;
+    height: 40%;
+    background-color: white;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: 10%;
+    border-radius: 15px;
+    }
+}
+
+/* .notRecon{
+    border: 1px solid black;
+    display: block;
+} */
+
+.imagenPrincipal{
+    width: 100%;
+}
+
+.banner{
+    font-style: italic;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.hoverFail{
+    background-color: tomato;
+}
+
+.hoverCorrect{
+    background-color: lightgreen;
+}
+
+.hoverFail:hover{
+    background-color: red;
+}
+
+.hoverCorrect:hover{
+    background-color: lawngreen;
+}
+
+.liItem:hover{
+    background-color: lightgray;
 }
